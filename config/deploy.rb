@@ -1,5 +1,8 @@
 require "bundler/capistrano"
 
+load "config/recipes/base"
+load "config/recipes/postgresql"
+
 set :application, "blogx"
 set :scm, :git
 set :repository,  "git://github.com/inforserver2/blogx.git"
@@ -11,7 +14,9 @@ ssh_options[:port] = 2222
 set :user, "hribeiro"
 set :group, "hribeiro"
 set :deploy_to, "/var/web/unnys.co"
+
 set :use_sudo, false
+default_run_options[:pty] = true
 
 set :deploy_via, :copy
 set :copy_strategy, :export
@@ -31,3 +36,5 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
+
+
