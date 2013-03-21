@@ -21,7 +21,7 @@
 #set :output, "#{path}/log/cron.log"
 
 every 1.minute do
-  runner "User.create(name:'jones_#{User.count+1}')"
+  runner "User.create(name:'jones_#{Time.now.sec+1}')"
 end
 
 
