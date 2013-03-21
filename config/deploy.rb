@@ -25,7 +25,9 @@ default_run_options[:pty] = true
 
 set :deploy_via, :copy
 set :copy_strategy, :export
+
 set :keep_releases, 2
+after "deploy:update", "deploy:cleanup" # needed to :keep_releases take effect
 
 
 # if you want to clean up old releases on each deploy uncomment this:

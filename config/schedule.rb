@@ -25,9 +25,9 @@ every 1.minute do
 end
 
 
-every 5.minutes do
- command "astrails-safe #{path}/config/astrails_safe.rb"
-end
+#every 5.minutes do
+# command "astrails-safe #{path}/config/astrails_safe.rb"
+#end
 
 # whenever -w -s environment=development
 # whenever -w -s environment=production
