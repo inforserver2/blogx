@@ -18,7 +18,7 @@
 # end
 # Learn more: http://github.com/javan/whenever
 
-#set :output, "#{path}/log/cron.log"
+set :output, "#{path}/log/cron.log"
 
 every 1.minute do
   runner "User.create(name:'jones_#{Time.now.sec+1}')"
