@@ -37,6 +37,7 @@ gem 'therubyracer'
  gem 'capistrano'
  gem 'capistrano-maintenance'
  gem 'whenever'
+ gem 'astrails-safe'
 
 # To use debugger
 # gem 'debugger'

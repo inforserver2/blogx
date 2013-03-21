@@ -25,10 +25,9 @@ every 1.minute do
 end
 
 
-#every 1.day, at: '4:30 am' do
-# command "astrails-safe #{path}/config/astrails_safe.rb"
-# rake "login_histories:clean"
-#end
+every 5.minutes do
+ command "astrails-safe #{path}/config/astrails_safe.rb"
+end
 
 # whenever -w -s environment=development
 # whenever -w -s environment=production
