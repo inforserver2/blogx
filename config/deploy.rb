@@ -19,11 +19,13 @@ set :user, "hribeiro"
 set :group, "hribeiro"
 set :deploy_to, "/var/web/unnys.co"
 
+
 set :use_sudo, false
 default_run_options[:pty] = true
 
 set :deploy_via, :copy
 set :copy_strategy, :export
+set :keep_releases, 5
 
 
 # if you want to clean up old releases on each deploy uncomment this:
