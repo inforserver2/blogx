@@ -1,4 +1,8 @@
 require "bundler/capistrano"
+require "capistrano/maintenance"
+
+set :whenever_command, "bundle exec whenever"
+require "whenever/capistrano"
 
 load "config/recipes/base"
 load "config/recipes/postgresql"
